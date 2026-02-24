@@ -116,6 +116,11 @@ public class MainPage extends AbstractComponent {
 		}
 
 	}
+	
+	public void closeAds() {
+		hideAds();
+	}
+
 
 	public void acceptConsentData() {
 		List<WebElement> overlays = driver.findElements(fc_overlay);

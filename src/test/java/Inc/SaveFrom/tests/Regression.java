@@ -25,7 +25,7 @@ public class Regression extends BaseTest {
 	@Test
 	public void checkInputField() {
 		main = new MainPage(driver);
-		main.acceptConsentDataWithAds();
+		main.acceptConsentData();
 		Assert.assertTrue(main.isUrlInputEmpty(urlpost));
 	}
 
@@ -38,10 +38,11 @@ public class Regression extends BaseTest {
 		Assert.assertFalse(videoPhotoData.isEmpty(), "No video or photo data found in JSON");
 
 		main = new MainPage(driver);
-		main.acceptConsentDataWithAds();
+		main.acceptConsentData();
 
 		for (HashMap<String, String> row : videoPhotoData) {
 			main.searchPostFile(row.get("url"));
+			main.closeAds();
 			main.downloadPostFile();
 			List<File> downloadedFile = main.checkFolder(downloadPath);
 			Assert.assertFalse(downloadedFile.isEmpty(), "No files downloaded");
@@ -118,11 +119,12 @@ public class Regression extends BaseTest {
 	public void downloadByProfile() throws IOException {
 		soft = new SoftAssert();
 		main = new MainPage(driver);
-		main.acceptConsentDataWithAds();
+//		main.acceptConsentDataWithAds();
+		main.acceptConsentData();
 //		main.goToMainPage();
 		String userNameText = main.searchByProfileName(profilename);
 		Assert.assertTrue(userNameText.contains(profilename), "Username doesn't contain expected name");
-
+		main.closeAds();
 		main.downloadPostFile();
 		List<File> downloadedFile = main.checkFolder(downloadPath);
 		Assert.assertFalse(downloadedFile.isEmpty(), "No files downloaded");

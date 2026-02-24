@@ -69,10 +69,10 @@ public class BaseTest {
 		TakesScreenshot ts = (TakesScreenshot)driver;
 		File screenshotFile = ts.getScreenshotAs(OutputType.FILE);
 //		File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		File destFile = new File(System.getProperty("user.dir") + "\\SaveFrom\\screenshots" + testCaseName + ".png");
+		File destFile = new File(System.getProperty("user.dir") + "\\Igram\\screenshots" + testCaseName + ".png");
 		FileUtils.copyFile(screenshotFile, destFile);
 
-		return System.getProperty("user.dir") + "\\SaveFrom\\target" +  testCaseName + ".png";
+		return System.getProperty("user.dir") + "\\Igram\\screenshots" +  testCaseName + ".png";
 	}
 
 	public String timestamp() {

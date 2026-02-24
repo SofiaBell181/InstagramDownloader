@@ -3,16 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Inc.SaveFrom.tests.LinkHealthTest">
+      <class name="Inc.SaveFrom.tests.Regression">
         <methods>
-          <include name="reelsPageLinks"/>
-          <include name="mainPageLinks"/>
-          <include name="storyPageLinks"/>
-          <include name="photoPageLinks"/>
-          <include name="igtvPageLinks"/>
+          <include name="downloadByProfile"/>
+          <include name="tearDown"/>
+          <include name="downloadVideoandPhoto" invocation-numbers="0"/>
+          <include name="checkInputField"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- Inc.SaveFrom.tests.LinkHealthTest -->
+      </class> <!-- Inc.SaveFrom.tests.Regression -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

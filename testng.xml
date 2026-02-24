@@ -4,25 +4,25 @@
 	<listeners>
 		<listener class-name="Inc.SaveFrom.testComponents.Listeners" />
 	</listeners>
-	
+
 	<test thread-count="5" name="Regress">
 		<classes>
 			<class name="Inc.SaveFrom.tests.Regression">
-			<methods>
-			<include name="downloadVideoandPhoto"></include>
-			</methods>
+				<methods>
+					<include name="downloadVideoandPhoto"></include>
+				</methods>
 			</class>
 		</classes>
-	</test> 
-	<!-- 
-		<test thread-count="5" name="LinksValidation">
+	</test>
+
+	<test thread-count="5" name="LinksValidation">
 		<classes>
-			
+
 			<class name="Inc.SaveFrom.tests.LinkHealthTest">
 			</class>
 
 		</classes>
-	</test>-->
+	</test>
 	<!--
 	Test -->
 </suite> <!--
