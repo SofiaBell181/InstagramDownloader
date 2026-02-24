@@ -1,0 +1,239 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>8/2/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Feb 23 15:57:45 CET 2026</td>
+</tr>
+<tr><td>Total time:</td><td>203 seconds (203934 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Inc.SaveFrom.tests.LinkHealthTest.storyPageLinks()'><b>storyPageLinks</b><br>Test class: Inc.SaveFrom.tests.LinkHealthTest</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (2be26ef9f47548865b17d0c5fbb5557e)] -&gt; xpath: //ins]
+(tried for 7 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.40.0&apos;, revision: &apos;b3333f1&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.134, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\sofia\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61497}, goog:processID: 35852, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61497/devtoo..., se:cdpVersion: 144.0.7559.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2be26ef9f47548865b17d0c5fbb5557e
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at Inc.SaveFrom.abstractComponents.AbstractComponent.waitForWebElementToAppear(AbstractComponent.java:29)
+	at Inc.SaveFrom.pageObjects.MainPage.gotoStory(MainPage.java:280)
+	at Inc.SaveFrom.tests.LinkHealthTest.storyPageLinks(LinkHealthTest.java:53)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2081661905", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2081661905'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (2be26ef9f47548865b17d0c5fbb5557e)] -&gt; xpath: //ins]
+(tried for 7 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.40.0&apos;, revision: &apos;b3333f1&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.134, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\sofia\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61497}, goog:processID: 35852, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61497/devtoo..., se:cdpVersion: 144.0.7559.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2be26ef9f47548865b17d0c5fbb5557e
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at Inc.SaveFrom.abstractComponents.AbstractComponent.waitForWebElementToAppear(AbstractComponent.java:29)
+	at Inc.SaveFrom.pageObjects.MainPage.gotoStory(MainPage.java:280)
+	at Inc.SaveFrom.tests.LinkHealthTest.storyPageLinks(LinkHealthTest.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>8</td>
+<td>Inc.SaveFrom.tests.LinkHealthTest@2bdd8394</td></tr>
+<tr>
+<td title='Inc.SaveFrom.tests.Regression.downloadVideoandPhoto()'><b>downloadVideoandPhoto</b><br>Test class: Inc.SaveFrom.tests.Regression<br>Parameters: [{name=Instagram_video_01, url= https://www.instagram.com/p/CCbMoeejaUD/?igshid=1wrsn2r3byihx}, {name=Instagram_photo_01, url=https://www.instagram.com/p/DUJHNJMklyq/}, {name=Instagram_photo_highlights_02, url=https://www.instagram.com/stories/highlights/17959604503611048/}, {name=Instagram_stories_01, url=https://www.instagram.com/stories/natgeo/}, {name=Instagram_reels_03, url=https://www.instagram.com/p/DUojLYuDUw3/}, {name=Instagram_igtv_01, url=https://www.instagram.com/tv/CFTyivHnZNd/}, {name=Instagram_carousel_01, url=https://www.instagram.com/p/DKPjx9iI1B-/}]</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (17b040bd68b110391eb36fef3da53110)] -&gt; xpath: //ins]
+(tried for 7 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.40.0&apos;, revision: &apos;b3333f1&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.134, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\sofia\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61333}, goog:processID: 2528, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61333/devtoo..., se:cdpVersion: 144.0.7559.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 17b040bd68b110391eb36fef3da53110
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at Inc.SaveFrom.abstractComponents.AbstractComponent.waitForWebElementToAppear(AbstractComponent.java:29)
+	at Inc.SaveFrom.pageObjects.MainPage.acceptConsentDataWithAds(MainPage.java:111)
+	at Inc.SaveFrom.tests.Regression.downloadVideoandPhoto(Regression.java:41)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2020981002", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2020981002'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (17b040bd68b110391eb36fef3da53110)] -&gt; xpath: //ins]
+(tried for 7 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.40.0&apos;, revision: &apos;b3333f1&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.134, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\sofia\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61333}, goog:processID: 2528, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61333/devtoo..., se:cdpVersion: 144.0.7559.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 17b040bd68b110391eb36fef3da53110
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at Inc.SaveFrom.abstractComponents.AbstractComponent.waitForWebElementToAppear(AbstractComponent.java:29)
+	at Inc.SaveFrom.pageObjects.MainPage.acceptConsentDataWithAds(MainPage.java:111)
+	at Inc.SaveFrom.tests.Regression.downloadVideoandPhoto(Regression.java:41)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>8</td>
+<td>Inc.SaveFrom.tests.Regression@4f49f6af</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Inc.SaveFrom.tests.LinkHealthTest.reelsPageLinks()'><b>reelsPageLinks</b><br>Test class: Inc.SaveFrom.tests.LinkHealthTest</td>
+<td></td>
+<td>21</td>
+<td>Inc.SaveFrom.tests.LinkHealthTest@2bdd8394</td></tr>
+<tr>
+<td title='Inc.SaveFrom.tests.Regression.downloadStory()'><b>downloadStory</b><br>Test class: Inc.SaveFrom.tests.Regression<br>Parameters: [{name=Instagram_video_01, url= https://www.instagram.com/p/CCbMoeejaUD/?igshid=1wrsn2r3byihx}, {name=Instagram_photo_01, url=https://www.instagram.com/p/DUJHNJMklyq/}, {name=Instagram_photo_highlights_02, url=https://www.instagram.com/stories/highlights/17959604503611048/}, {name=Instagram_stories_01, url=https://www.instagram.com/stories/natgeo/}, {name=Instagram_reels_03, url=https://www.instagram.com/p/DUojLYuDUw3/}, {name=Instagram_igtv_01, url=https://www.instagram.com/tv/CFTyivHnZNd/}, {name=Instagram_carousel_01, url=https://www.instagram.com/p/DKPjx9iI1B-/}]</td>
+<td></td>
+<td>14</td>
+<td>Inc.SaveFrom.tests.Regression@4f49f6af</td></tr>
+<tr>
+<td title='Inc.SaveFrom.tests.Regression.checkInputField()'><b>checkInputField</b><br>Test class: Inc.SaveFrom.tests.Regression</td>
+<td></td>
+<td>4</td>
+<td>Inc.SaveFrom.tests.Regression@4f49f6af</td></tr>
+<tr>
+<td title='Inc.SaveFrom.tests.Regression.downloadByProfile()'><b>downloadByProfile</b><br>Test class: Inc.SaveFrom.tests.Regression</td>
+<td></td>
+<td>28</td>
+<td>Inc.SaveFrom.tests.Regression@4f49f6af</td></tr>
+<tr>
+<td title='Inc.SaveFrom.tests.Regression.downloadReelsAndIgtv()'><b>downloadReelsAndIgtv</b><br>Test class: Inc.SaveFrom.tests.Regression<br>Parameters: [{name=Instagram_video_01, url= https://www.instagram.com/p/CCbMoeejaUD/?igshid=1wrsn2r3byihx}, {name=Instagram_photo_01, url=https://www.instagram.com/p/DUJHNJMklyq/}, {name=Instagram_photo_highlights_02, url=https://www.instagram.com/stories/highlights/17959604503611048/}, {name=Instagram_stories_01, url=https://www.instagram.com/stories/natgeo/}, {name=Instagram_reels_03, url=https://www.instagram.com/p/DUojLYuDUw3/}, {name=Instagram_igtv_01, url=https://www.instagram.com/tv/CFTyivHnZNd/}, {name=Instagram_carousel_01, url=https://www.instagram.com/p/DKPjx9iI1B-/}]</td>
+<td></td>
+<td>39</td>
+<td>Inc.SaveFrom.tests.Regression@4f49f6af</td></tr>
+<tr>
+<td title='Inc.SaveFrom.tests.LinkHealthTest.igtvPageLinks()'><b>igtvPageLinks</b><br>Test class: Inc.SaveFrom.tests.LinkHealthTest</td>
+<td></td>
+<td>21</td>
+<td>Inc.SaveFrom.tests.LinkHealthTest@2bdd8394</td></tr>
+<tr>
+<td title='Inc.SaveFrom.tests.LinkHealthTest.photoPageLinks()'><b>photoPageLinks</b><br>Test class: Inc.SaveFrom.tests.LinkHealthTest</td>
+<td></td>
+<td>17</td>
+<td>Inc.SaveFrom.tests.LinkHealthTest@2bdd8394</td></tr>
+<tr>
+<td title='Inc.SaveFrom.tests.LinkHealthTest.mainPageLinks()'><b>mainPageLinks</b><br>Test class: Inc.SaveFrom.tests.LinkHealthTest</td>
+<td></td>
+<td>16</td>
+<td>Inc.SaveFrom.tests.LinkHealthTest@2bdd8394</td></tr>
+</table><p>
+</body>
+</html>

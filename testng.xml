@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="IgramWorld">
+	<listeners>
+		<listener class-name="Inc.SaveFrom.testComponents.Listeners" />
+	</listeners>
+	
+	<test thread-count="5" name="Regress">
+		<classes>
+			<class name="Inc.SaveFrom.tests.Regression">
+			<methods>
+			<include name="downloadVideoandPhoto"></include>
+			</methods>
+			</class>
+		</classes>
+	</test> 
+	<!-- 
+		<test thread-count="5" name="LinksValidation">
+		<classes>
+			
+			<class name="Inc.SaveFrom.tests.LinkHealthTest">
+			</class>
+
+		</classes>
+	</test>-->
+	<!--
+	Test -->
+</suite> <!--
+Suite -->

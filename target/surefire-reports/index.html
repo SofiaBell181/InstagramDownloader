@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite, 5 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-SaveFrom" class="navigator-link">
+              <span class="suite-name border-failed">SaveFrom</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-SaveFrom" class="navigator-link ">
+                    <span>C:\Users\sofia\eclipse-workspace\SaveFrom\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-SaveFrom" class="navigator-link ">
+                    <span class="test-stats">2 tests</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-SaveFrom" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-SaveFrom" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-SaveFrom" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-SaveFrom" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-SaveFrom" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">10 methods, 5 failed,   5 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-SaveFrom" class="hide-methods failed suite-SaveFrom"> (hide)</a> <!-- hide-methods failed suite-SaveFrom -->
+                      <a href="#" panel-name="suite-SaveFrom" class="show-methods failed suite-SaveFrom"> (show)</a> <!-- show-methods failed suite-SaveFrom -->
+                    </span>
+                    <div class="method-list-content failed suite-SaveFrom">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SaveFrom" title="Inc.SaveFrom.tests.Regression" class="method navigator-link" hash-for-method="checkInputField">checkInputField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SaveFrom" title="Inc.SaveFrom.tests.Regression" class="method navigator-link" hash-for-method="downloadByProfile">downloadByProfile</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SaveFrom" title="Inc.SaveFrom.tests.Regression" class="method navigator-link" hash-for-method="downloadReelsAndIgtv([{name=Instagram_video_01, url= https://www.instagram.com/p/CCbMoeejaUD/?igshid=1wrsn2r3byihx}, {nam...)">downloadReelsAndIgtv([{name=Instagram_video_01, url= https://www.instagram.com/p/CCbMoeejaUD/?igshid=1wrsn2r3byihx}, {nam...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SaveFrom" title="Inc.SaveFrom.tests.Regression" class="method navigator-link" hash-for-method="downloadStory([{name=Instagram_video_01, url= https://www.instagram.com/p/CCbMoeejaUD/?igshid=1wrsn2r3byihx}, {nam...)">downloadStory([{name=Instagram_video_01, url= https://www.instagram.com/p/CCbMoeejaUD/?igshid=1wrsn2r3byihx}, {nam...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SaveFrom" title="Inc.SaveFrom.tests.Regression" class="method navigator-link" hash-for-method="downloadVideoandPhoto([{name=Instagram_video_01, url= https://www.instagram.com/p/CCbMoeejaUD/?igshid=1wrsn2r3byihx}, {nam...)">downloadVideoandPhoto([{name=Instagram_video_01, url= https://www.instagram.com/p/CCbMoeejaUD/?igshid=1wrsn2r3byihx}, {nam...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-SaveFrom -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-SaveFrom" class="hide-methods passed suite-SaveFrom"> (hide)</a> <!-- hide-methods passed suite-SaveFrom -->
+                      <a href="#" panel-name="suite-SaveFrom" class="show-methods passed suite-SaveFrom"> (show)</a> <!-- show-methods passed suite-SaveFrom -->
+                    </span>
+                    <div class="method-list-content passed suite-SaveFrom">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SaveFrom" title="Inc.SaveFrom.tests.LinkHealthTest" class="method navigator-link" hash-for-method="igtvPageLinks">igtvPageLinks</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SaveFrom" title="Inc.SaveFrom.tests.LinkHealthTest" class="method navigator-link" hash-for-method="mainPageLinks">mainPageLinks</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SaveFrom" title="Inc.SaveFrom.tests.LinkHealthTest" class="method navigator-link" hash-for-method="photoPageLinks">photoPageLinks</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SaveFrom" title="Inc.SaveFrom.tests.LinkHealthTest" class="method navigator-link" hash-for-method="reelsPageLinks">reelsPageLinks</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SaveFrom" title="Inc.SaveFrom.tests.LinkHealthTest" class="method navigator-link" hash-for-method="storyPageLinks">storyPageLinks</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-SaveFrom -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-SaveFrom" class="panel SaveFrom">
+          <div class="suite-SaveFrom-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">Inc.SaveFrom.tests.Regression</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkInputField">
+                  </a> <!-- checkInputField -->
+                  <span class="method-name">checkInputField</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (e88c3ea9a791093ffa47ac6f23f09674)] -&gt; xpath: //ins]
+(tried for 7 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.40.0&apos;, revision: &apos;b3333f1&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.110, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\sofia\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62049}, goog:processID: 17084, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62049/devtoo..., se:cdpVersion: 145.0.7632.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e88c3ea9a791093ffa47ac6f23f09674
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at Inc.SaveFrom.abstractComponents.AbstractComponent.waitForWebElementToAppear(AbstractComponent.java:29)
+	at Inc.SaveFrom.pageObjects.MainPage.acceptConsentDataWithAds(MainPage.java:111)
+	at Inc.SaveFrom.tests.Regression.checkInputField(Regression.java:28)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 15 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="downloadByProfile">
+                  </a> <!-- downloadByProfile -->
+                  <span class="method-name">downloadByProfile</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.cssSelector: .output-component&apos;
+(tried for 7 seconds with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at Inc.SaveFrom.abstractComponents.AbstractComponent.waitForWebElementToAppear(AbstractComponent.java:29)
+	at Inc.SaveFrom.pageObjects.MainPage.searchByProfileName(MainPage.java:206)
+	at Inc.SaveFrom.tests.Regression.downloadByProfile(Regression.java:123)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.output-component&quot;}
+  (Session info: chrome=145.0.7632.110)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: &apos;4.40.0&apos;, revision: &apos;b3333f1&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [60082f12a941ac0f80b580ec67d5c4c6, findElement {value=.output-component, using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.110, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\sofia\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57852}, goog:processID: 40284, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57852/devtoo..., se:cdpVersion: 145.0.7632.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 60082f12a941ac0f80b580ec67d5c4c6
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:424)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:418)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy11.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:367)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:353)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:350)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:207)
+	... 23 more
+... Removed 15 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="downloadReelsAndIgtv([{name=Instagram_video_01, url= https://www.instagram.com/p/CCbMoeejaUD/?igshid=1wrsn2r3byihx}, {nam...)">
+                  </a> <!-- downloadReelsAndIgtv([{name=Instagram_video_01, url= https://www.instagram.com/p/CCbMoeejaUD/?igshid=1wrsn2r3byihx}, {nam...) -->
+                  <span class="method-name">downloadReelsAndIgtv</span>
+                  <span class="parameters">([{name=Instagram_video_01, url= https://www.instagram.com/p/CCbMoeejaUD/?igshid=1wrsn2r3byihx}, {name=Instagram_photo_01, url=https://www.instagram.com/p/DUJHNJMklyq/}, {name=Instagram_photo_highlights_02, url=https://www.instagram.com/stories/highlights/17959604503611048/}, {name=Instagram_stories_01, url=https://www.instagram.com/stories/natgeo/}, {name=Instagram_reels_03, url=https://www.instagram.com/p/DUojLYuDUw3/}, {name=Instagram_igtv_01, url=https://www.instagram.com/tv/CFTyivHnZNd/}, {name=Instagram_carousel_01, url=https://www.instagram.com/p/DKPjx9iI1B-/}])</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.cssSelector: .output-component&apos;
+(tried for 7 seconds with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at Inc.SaveFrom.abstractComponents.AbstractComponent.waitForWebElementToAppear(AbstractComponent.java:29)
+	at Inc.SaveFrom.pageObjects.MainPage.searchPostFile(MainPage.java:142)
+	at Inc.SaveFrom.tests.Regression.downloadReelsAndIgtv(Regression.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.output-component&quot;}
+  (Session info: chrome=145.0.7632.110)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: &apos;4.40.0&apos;, revision: &apos;b3333f1&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7c53fc468de40563bb2832d413b88202, findElement {value=.output-component, using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.110, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\sofia\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58272}, goog:processID: 8936, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58272/devtoo..., se:cdpVersion: 145.0.7632.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7c53fc468de40563bb2832d413b88202
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:424)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:418)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy11.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:367)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:353)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:350)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:207)
+	... 23 more
+... Removed 15 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="downloadStory([{name=Instagram_video_01, url= https://www.instagram.com/p/CCbMoeejaUD/?igshid=1wrsn2r3byihx}, {nam...)">
+                  </a> <!-- downloadStory([{name=Instagram_video_01, url= https://www.instagram.com/p/CCbMoeejaUD/?igshid=1wrsn2r3byihx}, {nam...) -->
+                  <span class="method-name">downloadStory</span>
+                  <span class="parameters">([{name=Instagram_video_01, url= https://www.instagram.com/p/CCbMoeejaUD/?igshid=1wrsn2r3byihx}, {name=Instagram_photo_01, url=https://www.instagram.com/p/DUJHNJMklyq/}, {name=Instagram_photo_highlights_02, url=https://www.instagram.com/stories/highlights/17959604503611048/}, {name=Instagram_stories_01, url=https://www.instagram.com/stories/natgeo/}, {name=Instagram_reels_03, url=https://www.instagram.com/p/DUojLYuDUw3/}, {name=Instagram_igtv_01, url=https://www.instagram.com/tv/CFTyivHnZNd/}, {name=Instagram_carousel_01, url=https://www.instagram.com/p/DKPjx9iI1B-/}])</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (20e48cefe3bccb6706aab283d5f75e05)] -&gt; xpath: //ins]
+(tried for 7 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.40.0&apos;, revision: &apos;b3333f1&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.110, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\sofia\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52724}, goog:processID: 39856, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52724/devtoo..., se:cdpVersion: 145.0.7632.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 20e48cefe3bccb6706aab283d5f75e05
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at Inc.SaveFrom.abstractComponents.AbstractComponent.waitForWebElementToAppear(AbstractComponent.java:29)
+	at Inc.SaveFrom.pageObjects.MainPage.gotoStory(MainPage.java:280)
+	at Inc.SaveFrom.tests.Regression.downloadStory(Regression.java:70)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 15 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="downloadVideoandPhoto([{name=Instagram_video_01, url= https://www.instagram.com/p/CCbMoeejaUD/?igshid=1wrsn2r3byihx}, {nam...)">
+                  </a> <!-- downloadVideoandPhoto([{name=Instagram_video_01, url= https://www.instagram.com/p/CCbMoeejaUD/?igshid=1wrsn2r3byihx}, {nam...) -->
+                  <span class="method-name">downloadVideoandPhoto</span>
+                  <span class="parameters">([{name=Instagram_video_01, url= https://www.instagram.com/p/CCbMoeejaUD/?igshid=1wrsn2r3byihx}, {name=Instagram_photo_01, url=https://www.instagram.com/p/DUJHNJMklyq/}, {name=Instagram_photo_highlights_02, url=https://www.instagram.com/stories/highlights/17959604503611048/}, {name=Instagram_stories_01, url=https://www.instagram.com/stories/natgeo/}, {name=Instagram_reels_03, url=https://www.instagram.com/p/DUojLYuDUw3/}, {name=Instagram_igtv_01, url=https://www.instagram.com/tv/CFTyivHnZNd/}, {name=Instagram_carousel_01, url=https://www.instagram.com/p/DKPjx9iI1B-/}])</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (e51076fce6421c41e0494d0f58bafa60)] -&gt; xpath: //ins]
+(tried for 7 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.40.0&apos;, revision: &apos;b3333f1&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.110, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\sofia\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50179}, goog:processID: 12244, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50179/devtoo..., se:cdpVersion: 145.0.7632.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e51076fce6421c41e0494d0f58bafa60
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at Inc.SaveFrom.abstractComponents.AbstractComponent.waitForWebElementToAppear(AbstractComponent.java:29)
+	at Inc.SaveFrom.pageObjects.MainPage.acceptConsentDataWithAds(MainPage.java:111)
+	at Inc.SaveFrom.tests.Regression.downloadVideoandPhoto(Regression.java:41)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 15 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-SaveFrom-class-failed -->
+          <div class="suite-SaveFrom-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Inc.SaveFrom.tests.LinkHealthTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="igtvPageLinks">
+                  </a> <!-- igtvPageLinks -->
+                  <span class="method-name">igtvPageLinks</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="mainPageLinks">
+                  </a> <!-- mainPageLinks -->
+                  <span class="method-name">mainPageLinks</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="photoPageLinks">
+                  </a> <!-- photoPageLinks -->
+                  <span class="method-name">photoPageLinks</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="reelsPageLinks">
+                  </a> <!-- reelsPageLinks -->
+                  <span class="method-name">reelsPageLinks</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="storyPageLinks">
+                  </a> <!-- storyPageLinks -->
+                  <span class="method-name">storyPageLinks</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-SaveFrom-class-passed -->
+        </div> <!-- panel SaveFrom -->
+        <div panel-name="test-xml-SaveFrom" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\sofia\eclipse-workspace\SaveFrom\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite parallel=&quot;tests&quot; name=&quot;SaveFrom&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;Inc.SaveFrom.testComponents.Listeners&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Regress&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;Inc.SaveFrom.tests.Regression&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Regress --&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;LinksValidation&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;Inc.SaveFrom.tests.LinkHealthTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- LinksValidation --&gt;
+&lt;/suite&gt; &lt;!-- SaveFrom --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-SaveFrom" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for SaveFrom</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Regress (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">LinksValidation (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-SaveFrom" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for SaveFrom</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-SaveFrom" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for SaveFrom</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_SaveFrom');
+function tableData_SaveFrom() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(10);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'downloadReelsAndIgtv')
+data.setCell(0, 2, 'Inc.SaveFrom.tests.Regression')
+data.setCell(0, 3, 21588);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'photoPageLinks')
+data.setCell(1, 2, 'Inc.SaveFrom.tests.LinkHealthTest')
+data.setCell(1, 3, 20663);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'igtvPageLinks')
+data.setCell(2, 2, 'Inc.SaveFrom.tests.LinkHealthTest')
+data.setCell(2, 3, 20521);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'downloadByProfile')
+data.setCell(3, 2, 'Inc.SaveFrom.tests.Regression')
+data.setCell(3, 3, 19995);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'reelsPageLinks')
+data.setCell(4, 2, 'Inc.SaveFrom.tests.LinkHealthTest')
+data.setCell(4, 3, 18274);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'storyPageLinks')
+data.setCell(5, 2, 'Inc.SaveFrom.tests.LinkHealthTest')
+data.setCell(5, 3, 17947);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'mainPageLinks')
+data.setCell(6, 2, 'Inc.SaveFrom.tests.LinkHealthTest')
+data.setCell(6, 3, 13569);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'downloadStory')
+data.setCell(7, 2, 'Inc.SaveFrom.tests.Regression')
+data.setCell(7, 3, 9108);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'downloadVideoandPhoto')
+data.setCell(8, 2, 'Inc.SaveFrom.tests.Regression')
+data.setCell(8, 3, 8468);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'checkInputField')
+data.setCell(9, 2, 'Inc.SaveFrom.tests.Regression')
+data.setCell(9, 3, 8343);
+window.suiteTableData['SaveFrom']= { tableData: data, tableDiv: 'times-div-SaveFrom'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <div id="times-div-SaveFrom">
+              </div> <!-- times-div-SaveFrom -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-SaveFrom" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for SaveFrom</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-SaveFrom" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-SaveFrom" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">Inc.SaveFrom.tests.Regression</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Inc.SaveFrom.tests.LinkHealthTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Inc.SaveFrom.tests.Regression</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">checkInputField</span>
+                <span class="method-start">2525 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Inc.SaveFrom.tests.LinkHealthTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">igtvPageLinks</span>
+                <span class="method-start">2552 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Inc.SaveFrom.tests.Regression</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">12648 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">downloadByProfile</span>
+                <span class="method-start">14471 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Inc.SaveFrom.tests.LinkHealthTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">23075 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">mainPageLinks</span>
+                <span class="method-start">24587 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Inc.SaveFrom.tests.Regression</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">35102 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">downloadReelsAndIgtv([{name=Instagram_video_01, url= https://www.instagram.com/p/CCbMoeejaUD/?igshid=1wrsn2r3byihx}, {nam...)</span>
+                <span class="method-start">36149 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Inc.SaveFrom.tests.LinkHealthTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">38158 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">photoPageLinks</span>
+                <span class="method-start">40095 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Inc.SaveFrom.tests.Regression</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">58161 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">downloadStory([{name=Instagram_video_01, url= https://www.instagram.com/p/CCbMoeejaUD/?igshid=1wrsn2r3byihx}, {nam...)</span>
+                <span class="method-start">59824 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Inc.SaveFrom.tests.LinkHealthTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">60760 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">reelsPageLinks</span>
+                <span class="method-start">62775 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Inc.SaveFrom.tests.Regression</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">69720 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">downloadVideoandPhoto([{name=Instagram_video_01, url= https://www.instagram.com/p/CCbMoeejaUD/?igshid=1wrsn2r3byihx}, {nam...)</span>
+                <span class="method-start">71570 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Inc.SaveFrom.tests.LinkHealthTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">81051 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">storyPageLinks</span>
+                <span class="method-start">82682 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>
