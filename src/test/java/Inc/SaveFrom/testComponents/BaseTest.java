@@ -22,6 +22,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -68,10 +69,10 @@ public class BaseTest {
 		TakesScreenshot ts = (TakesScreenshot)driver;
 		File screenshotFile = ts.getScreenshotAs(OutputType.FILE);
 //		File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		File destFile = new File(System.getProperty("user.dir") + "\\SaveFrom\\target" + timestamp() + testCaseName + ".png");
+		File destFile = new File(System.getProperty("user.dir") + "\\SaveFrom\\screenshots" + testCaseName + ".png");
 		FileUtils.copyFile(screenshotFile, destFile);
 
-		return System.getProperty("user.dir") + "\\SaveFrom\\target" + timestamp() +  testCaseName + ".png";
+		return System.getProperty("user.dir") + "\\SaveFrom\\target" +  testCaseName + ".png";
 	}
 
 	public String timestamp() {
@@ -110,10 +111,10 @@ public class BaseTest {
 	}
 
 	
-//	@AfterMethod
-//	public void tearDown() {
-//		if (driver != null) {
-//			driver.quit();
-//		}
-//	}
+	@AfterMethod
+	public void tearDown() {
+		if (driver != null) {
+			driver.quit();
+		}
+	}
 }
