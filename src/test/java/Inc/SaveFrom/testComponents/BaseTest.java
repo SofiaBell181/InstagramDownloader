@@ -22,8 +22,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.json.JsonMapper;
@@ -69,10 +69,10 @@ public class BaseTest {
 		TakesScreenshot ts = (TakesScreenshot)driver;
 		File screenshotFile = ts.getScreenshotAs(OutputType.FILE);
 //		File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		File destFile = new File(System.getProperty("user.dir") + "\\Igram\\screenshots" + testCaseName + ".png");
+		File destFile = new File(System.getProperty("user.dir") + "\\screenshots\\" + testCaseName + timestamp() + ".png");
 		FileUtils.copyFile(screenshotFile, destFile);
 
-		return System.getProperty("user.dir") + "\\Igram\\screenshots" +  testCaseName + ".png";
+		return System.getProperty("user.dir") + "\\screenshots\\" +  testCaseName + timestamp() + ".png";
 	}
 
 	public String timestamp() {
@@ -99,7 +99,7 @@ public class BaseTest {
 		driver.get(getUrl());
 	}
 
-	@BeforeMethod(alwaysRun = true)
+	@BeforeClass (alwaysRun = true)
 	public void setUp() throws IOException, InterruptedException {
 		prop = new Properties();
 		FileInputStream fis = new FileInputStream(
@@ -111,7 +111,7 @@ public class BaseTest {
 	}
 
 	
-	@AfterMethod
+	@AfterClass (alwaysRun = true)
 	public void tearDown() {
 		if (driver != null) {
 			driver.quit();

@@ -14,7 +14,7 @@ import org.testng.asserts.SoftAssert;
 import Inc.SaveFrom.pageObjects.MainPage;
 import Inc.SaveFrom.testComponents.BaseTest;
 
-public class Regression extends BaseTest {
+public class DownloadFiles extends BaseTest {
 
 	public String urlpost = "https://www.instagram.com/p/DUOEv2MgOZu/";
 	public String profilename = "natgeo";
@@ -38,7 +38,7 @@ public class Regression extends BaseTest {
 		Assert.assertFalse(videoPhotoData.isEmpty(), "No video or photo data found in JSON");
 
 		main = new MainPage(driver);
-		main.acceptConsentData();
+//		main.acceptConsentData();
 
 		for (HashMap<String, String> row : videoPhotoData) {
 			main.searchPostFile(row.get("url"));
@@ -119,9 +119,7 @@ public class Regression extends BaseTest {
 	public void downloadByProfile() throws IOException {
 		soft = new SoftAssert();
 		main = new MainPage(driver);
-//		main.acceptConsentDataWithAds();
 		main.acceptConsentData();
-//		main.goToMainPage();
 		String userNameText = main.searchByProfileName(profilename);
 		Assert.assertTrue(userNameText.contains(profilename), "Username doesn't contain expected name");
 		main.closeAds();
@@ -135,13 +133,13 @@ public class Regression extends BaseTest {
 		FileUtils.cleanDirectory(new File(downloadPath));
 
 		String errorMessage = main.goToStoryInProfile();
-		if(errorMessage != null) {
-			Assert.assertTrue(errorMessage.contains("It seems that there are no stories for the last 24 hours. Please try again later."));
-		}
-		else {
+		if (errorMessage != null) {
+			Assert.assertTrue(errorMessage
+					.contains("It seems that there are no stories for the last 24 hours. Please try again later."));
+		} else {
 			main.downloadPostFile();
 		}
-		
+
 		Assert.assertFalse(downloadedFile.isEmpty(), "No files downloaded");
 
 		if (downloadedFile.size() == 1) {

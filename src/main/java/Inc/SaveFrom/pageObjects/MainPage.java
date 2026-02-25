@@ -99,28 +99,12 @@ public class MainPage extends AbstractComponent {
 	By links = By.tagName("a");
 
 	By fc_overlay = By.className("fc-consent-root");
-	
+
 	By errorMessage = By.className("error-message");
 
-	public void acceptConsentDataWithAds() {
-		List<WebElement> overlays = driver.findElements(fc_overlay);
-		if (!overlays.isEmpty()) {
-			WebElement overlay = overlays.get(0);
-			btnConsent.click();
-			waitForElementToDisappear(overlay);
-			waitForWebElementToAppear(ads);
-			hideAds();
-		} else {
-			waitForWebElementToAppear(ads);
-			hideAds();
-		}
-
-	}
-	
 	public void closeAds() {
 		hideAds();
 	}
-
 
 	public void acceptConsentData() {
 		List<WebElement> overlays = driver.findElements(fc_overlay);
@@ -157,7 +141,6 @@ public class MainPage extends AbstractComponent {
 	public int downloadPostFile() {
 		List<WebElement> btnsDownload = driver.findElements(btnsDownloadPost);
 		expectedDownloads = btnsDownload.size();
-//		System.out.println(expectedDownloads);
 
 		if (expectedDownloads == 0) {
 			throw new AssertionError("'Download' buttons not found");
@@ -309,10 +292,5 @@ public class MainPage extends AbstractComponent {
 		waitForWebElementToAppear(ads);
 		hideAds();
 	}
-
-//	public List<WebElement> getLinks() {
-//		List<WebElement> listOfLinks = driver.findElements(links);
-//		return listOfLinks;
-//	}
 
 }

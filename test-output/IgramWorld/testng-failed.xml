@@ -4,14 +4,15 @@
   <listeners>
     <listener class-name="Inc.SaveFrom.testComponents.Listeners"/>
   </listeners>
-  <test thread-count="5" parallel="tests" name="Regress(failed)">
+  <test thread-count="5" parallel="tests" name="Regression(failed)">
     <classes>
-      <class name="Inc.SaveFrom.tests.Regression">
+      <class name="Inc.SaveFrom.tests.DownloadFiles">
         <methods>
           <include name="downloadVideoandPhoto" invocation-numbers="0"/>
+          <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- Inc.SaveFrom.tests.Regression -->
+      </class> <!-- Inc.SaveFrom.tests.DownloadFiles -->
     </classes>
-  </test> <!-- Regress(failed) -->
+  </test> <!-- Regression(failed) -->
 </suite> <!-- Failed suite [IgramWorld] -->

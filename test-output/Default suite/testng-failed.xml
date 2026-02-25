@@ -5,10 +5,8 @@
     <classes>
       <class name="Inc.SaveFrom.tests.Regression">
         <methods>
-          <include name="downloadByProfile"/>
           <include name="tearDown"/>
           <include name="downloadVideoandPhoto" invocation-numbers="0"/>
-          <include name="checkInputField"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- Inc.SaveFrom.tests.Regression -->

@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite parallel="tests" name="IgramWorld">
+<suite parallel="tests" name="IgramWorld.Regression">
 	<listeners>
 		<listener class-name="Inc.SaveFrom.testComponents.Listeners" />
 	</listeners>
 
-	<test thread-count="5" name="Regress">
+	<test thread-count="5" name="DownloadFiles">
 		<classes>
-			<class name="Inc.SaveFrom.tests.Regression">
-				<methods>
-					<include name="downloadVideoandPhoto"></include>
-				</methods>
+			<class name="Inc.SaveFrom.tests.DownloadFiles">
 			</class>
 		</classes>
 	</test>
