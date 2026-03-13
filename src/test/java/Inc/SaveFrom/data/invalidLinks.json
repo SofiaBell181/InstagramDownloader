@@ -1,0 +1,41 @@
+[
+  {
+    "link": "www.instagram.com/p/CZ6_hZMtjvF/",
+    "name": "Incomplete link"
+  },
+    
+  {
+      "link": "https://www.instagram.com/stories/highlights/17971513871602660666666666666666/",
+      "name": "Invalid link with too long ID"
+  },
+    {
+        "link": "https://www.instagram.com/stories/highlights/17dfy95%%5E4397119152871/",
+        "name": "Link with invalid symbols"
+    },
+    {
+        "link": "https://www.instagram.com/p/DJURN47OruC2",
+        "name": "Invalid link with non-existent post"
+    },
+    {
+        "link": "console.log('Hello, world!')",
+        "name": "Non-URL input"
+    },
+    {
+        "link": "Sshdjdjd djdjdjfjf",
+        "name": "Random text input"
+    },
+    {
+        "link": "826336551306968/",
+        "name": "Numeric input without URL format"
+    },
+	{
+	        "link": "https://www.youtube.com/watch?v=GefZ45gXVq0",
+	        "name": "Unsupported platform link"
+	},
+	
+  {
+    "privatelink": "https://www.instagram.com/tania.tania_ly/",
+    "name": "Link on private profile"
+  }
+  
+]

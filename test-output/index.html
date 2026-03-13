@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-IgramWorld" class="navigator-link">
-              <span class="suite-name border-failed">IgramWorld</span>
+              <span class="suite-name border-passed">IgramWorld</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-IgramWorld" class="navigator-link ">
-                    <span>C:\Users\sofia\eclipse-workspace\Igram\regression.xml</span>
+                    <span>C:\Users\sofia\eclipse-workspace\Igram\testSuites\ErrorValidation.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,21 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-IgramWorld" class="hide-methods failed suite-IgramWorld"> (hide)</a> <!-- hide-methods failed suite-IgramWorld -->
-                      <a href="#" panel-name="suite-IgramWorld" class="show-methods failed suite-IgramWorld"> (show)</a> <!-- show-methods failed suite-IgramWorld -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-IgramWorld" class="hide-methods passed suite-IgramWorld"> (hide)</a> <!-- hide-methods passed suite-IgramWorld -->
+                      <a href="#" panel-name="suite-IgramWorld" class="show-methods passed suite-IgramWorld"> (show)</a> <!-- show-methods passed suite-IgramWorld -->
                     </span>
-                    <div class="method-list-content failed suite-IgramWorld">
+                    <div class="method-list-content passed suite-IgramWorld">
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-IgramWorld" title="Inc.SaveFrom.tests.DownloadFiles" class="method navigator-link" hash-for-method="downloadVideoandPhoto([{name=Instagram_video_01, url= https://www.instagram.com/p/CCbMoeejaUD/?igshid=1wrsn2r3byihx}, {nam...)">downloadVideoandPhoto([{name=Instagram_video_01, url= https://www.instagram.com/p/CCbMoeejaUD/?igshid=1wrsn2r3byihx}, {nam...)</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-IgramWorld" title="Inc.SaveFrom.tests.ErrorValidation" class="method navigator-link" hash-for-method="emptyRequest">emptyRequest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-IgramWorld -->
+                    </div> <!-- method-list-content passed suite-IgramWorld -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -118,53 +118,25 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-IgramWorld" class="panel IgramWorld">
-          <div class="suite-IgramWorld-class-failed">
+          <div class="suite-IgramWorld-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">Inc.SaveFrom.tests.DownloadFiles</span>
+              <img src="passed.png"/>
+              <span class="class-name">Inc.SaveFrom.tests.ErrorValidation</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="downloadVideoandPhoto([{name=Instagram_video_01, url= https://www.instagram.com/p/CCbMoeejaUD/?igshid=1wrsn2r3byihx}, {nam...)">
-                  </a> <!-- downloadVideoandPhoto([{name=Instagram_video_01, url= https://www.instagram.com/p/CCbMoeejaUD/?igshid=1wrsn2r3byihx}, {nam...) -->
-                  <span class="method-name">downloadVideoandPhoto</span>
-                  <span class="parameters">([{name=Instagram_video_01, url= https://www.instagram.com/p/CCbMoeejaUD/?igshid=1wrsn2r3byihx}, {name=Instagram_photo_01, url=https://www.instagram.com/p/DUJHNJMklyq/}, {name=Instagram_photo_highlights_02, url=https://www.instagram.com/stories/highlights/17959604503611048/}, {name=Instagram_stories_01, url=https://www.instagram.com/stories/natgeo/}, {name=Instagram_reels_03, url=https://www.instagram.com/p/DUojLYuDUw3/}, {name=Instagram_igtv_01, url=https://www.instagram.com/tv/CFTyivHnZNd/}, {name=Instagram_carousel_01, url=https://www.instagram.com/p/DKPjx9iI1B-/}])</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button class=&quot;output-list__caption-read-more&quot;&gt;...&lt;/button&gt; is not clickable at point (1038, 412). Other element would receive the click: &lt;div class=&quot;fc-dialog-overlay&quot;&gt;&lt;/div&gt;
-  (Session info: chrome=145.0.7632.110)
-Build info: version: &apos;4.40.0&apos;, revision: &apos;b3333f1&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [932844855134e41e7a19c5f8e79ed8ee, clickElement {id=f.643D8BE01B795C00C7235808534A2378.d.E82ACE456FD0B82879B1AA579B408F10.e.47}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.110, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\sofia\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52059}, goog:processID: 31560, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52059/devtoo..., se:cdpVersion: 145.0.7632.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (932844855134e41e7a19c5f8e79ed8ee)] -&gt; xpath: //button[@class=&apos;output-list__caption-read-more&apos;]]
-Session ID: 932844855134e41e7a19c5f8e79ed8ee
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at Inc.SaveFrom.pageObjects.MainPage.searchPostFile(MainPage.java:137)
-	at Inc.SaveFrom.tests.DownloadFiles.downloadVideoandPhoto(DownloadFiles.java:44)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 15 stack frames
-</div> <!-- stack-trace -->
+                  <a name="emptyRequest">
+                  </a> <!-- emptyRequest -->
+                  <span class="method-name">emptyRequest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-IgramWorld-class-failed -->
+          </div> <!-- suite-IgramWorld-class-passed -->
         </div> <!-- panel IgramWorld -->
         <div panel-name="test-xml-IgramWorld" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\sofia\eclipse-workspace\Igram\regression.xml</span>
+            <span class="header-content">C:\Users\sofia\eclipse-workspace\Igram\testSuites\ErrorValidation.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -174,15 +146,15 @@ Session ID: 932844855134e41e7a19c5f8e79ed8ee
   &lt;listeners&gt;
     &lt;listener class-name=&quot;Inc.SaveFrom.testComponents.Listeners&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Regression&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;DownloadFiles&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Inc.SaveFrom.tests.DownloadFiles&quot;&gt;
+      &lt;class name=&quot;Inc.SaveFrom.tests.ErrorValidation&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;downloadVideoandPhoto&quot;/&gt;
+          &lt;include name=&quot;emptyRequest&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- Inc.SaveFrom.tests.DownloadFiles --&gt;
+      &lt;/class&gt; &lt;!-- Inc.SaveFrom.tests.ErrorValidation --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Regression --&gt;
+  &lt;/test&gt; &lt;!-- DownloadFiles --&gt;
 &lt;/suite&gt; &lt;!-- IgramWorld --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -194,7 +166,7 @@ Session ID: 932844855134e41e7a19c5f8e79ed8ee
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Regression (1 class)</span>
+                <span class="test-name">DownloadFiles (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -222,14 +194,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'downloadVideoandPhoto')
-data.setCell(0, 2, 'Inc.SaveFrom.tests.DownloadFiles')
-data.setCell(0, 3, 2067);
+data.setCell(0, 1, 'emptyRequest')
+data.setCell(0, 2, 'Inc.SaveFrom.tests.ErrorValidation')
+data.setCell(0, 3, 1603);
 window.suiteTableData['IgramWorld']= { tableData: data, tableDiv: 'times-div-IgramWorld'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-IgramWorld">
               </div> <!-- times-div-IgramWorld -->
             </div> <!-- times-div -->
@@ -244,19 +216,15 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-IgramWorld" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">4 ignored methods</span>
+            <span class="header-content">2 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">Inc.SaveFrom.tests.DownloadFiles</span>
+              <span class="ignored-class-name">Inc.SaveFrom.tests.ErrorValidation</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">downloadByProfile</span>
+                <span class="ignored-method-name">IncompleteLink</span>
                 <br/>
-                <span class="ignored-method-name">downloadStory</span>
-                <br/>
-                <span class="ignored-method-name">checkInputField</span>
-                <br/>
-                <span class="ignored-method-name">downloadReelsAndIgtv</span>
+                <span class="ignored-method-name">privateLink</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -268,20 +236,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Inc.SaveFrom.tests.DownloadFiles</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Inc.SaveFrom.tests.ErrorValidation</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">downloadVideoandPhoto([{name=Instagram_video_01, url= https://www.instagram.com/p/CCbMoeejaUD/?igshid=1wrsn2r3byihx}, {nam...)</span>
-                <span class="method-start">2080 ms</span>
+                <span class="method-name">emptyRequest</span>
+                <span class="method-start">2017 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">4426 ms</span>
+                <span class="method-start">3633 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

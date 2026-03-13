@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Inc.SaveFrom.tests.Regression">
+      <class name="Inc.SaveFrom.tests.ErrorValidation">
         <methods>
           <include name="tearDown"/>
-          <include name="downloadVideoandPhoto" invocation-numbers="0"/>
+          <include name="IncompleteLink" invocation-numbers="0"/>
+          <include name="emptyRequest"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- Inc.SaveFrom.tests.Regression -->
+      </class> <!-- Inc.SaveFrom.tests.ErrorValidation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

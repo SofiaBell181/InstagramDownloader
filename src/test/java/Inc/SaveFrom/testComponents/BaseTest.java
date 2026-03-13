@@ -79,9 +79,9 @@ public class BaseTest {
 		return new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
 	}
 
-	public List<HashMap<String, String>> getJsonDataToMap() throws IOException {
+	public List<HashMap<String, String>> getJsonDataToMap(String urlPath) throws IOException {
 		String jsonContent = FileUtils.readFileToString(
-				new File(System.getProperty("user.dir") + "\\src\\test\\java\\Inc\\SaveFrom\\Data\\data.json"),
+				new File(System.getProperty("user.dir") + urlPath),
 				StandardCharsets.UTF_8);
 		JsonMapper mapper = new JsonMapper();
 		List<HashMap<String, String>> data = mapper.readValue(jsonContent,

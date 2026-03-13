@@ -38,7 +38,6 @@ public class DownloadFiles extends BaseTest {
 		Assert.assertFalse(videoPhotoData.isEmpty(), "No video or photo data found in JSON");
 
 		main = new MainPage(driver);
-//		main.acceptConsentData();
 
 		for (HashMap<String, String> row : videoPhotoData) {
 			main.searchPostFile(row.get("url"));
@@ -155,7 +154,7 @@ public class DownloadFiles extends BaseTest {
 
 	@DataProvider
 	public Object[][] getData() throws IOException {
-		List<HashMap<String, String>> data = getJsonDataToMap();
+		List<HashMap<String, String>> data = getJsonDataToMap("\\src\\test\\java\\Inc\\SaveFrom\\Data\\data.json");
 		return new Object[][] { { data } };
 	}
 

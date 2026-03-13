@@ -28,79 +28,82 @@ public class MainPage extends AbstractComponent {
 	}
 
 	@FindBy(xpath = "//button[@aria-label='Consent']")
-	WebElement btnConsent;
+	private WebElement btnConsent;
 
 	@FindBy(id = "search-form-input")
-	WebElement igramInput;
+	private WebElement igramInput;
 
 	@FindBy(css = ".search-form__button")
-	WebElement btnDownload;
+	private WebElement btnDownload;
 
 	@FindBy(className = "search-form__clipboard-clear")
-	WebElement btnClear;
+	private WebElement btnClear;
 
 	@FindBy(css = ".output-component")
-	WebElement searchResult;
+	private WebElement searchResult;
 
 	@FindBy(css = ".output-list__list")
-	WebElement outputList;
+	private WebElement outputList;
 
 	@FindBy(css = ".output-profile")
-	WebElement outputProfile;
+	private WebElement outputProfile;
 
 	@FindBy(className = "profile-media-list")
-	WebElement mediaListProfile;
+	private WebElement mediaListProfile;
 
 	@FindBy(className = "user-info__username-text")
-	WebElement userName;
+	private WebElement userName;
 
 	@FindBy(xpath = "//button[@class='tabs-component__button' and contains(text(), 'stories')]")
-	WebElement btnProfileStories;
+	private WebElement btnProfileStories;
 
 	@FindBy(xpath = "//button[@class='tabs-component__button' and contains(text(), 'highlights')]")
-	WebElement btnProfileHighlights;
+	private WebElement btnProfileHighlights;
 
 	@FindBy(className = "highlights-component")
-	WebElement highlightsPosts;
+	private WebElement highlightsPosts;
 
 	@FindBy(xpath = "//button[@class='tabs-component__button' and contains(text(), 'reels')]")
-	WebElement btnProfileReels;
+	private WebElement btnProfileReels;
 
 	@FindBy(css = ".outputList")
-	WebElement logo;
+	private WebElement logo;
 
 	@FindBy(xpath = "//span[contains(text(),'Photo')]/parent::a")
-	WebElement menuPhoto;
+	private WebElement menuPhoto;
 
 	@FindBy(xpath = "//span[contains(text(),\"Story\")]/parent::a")
-	WebElement menuStory;
+	private WebElement menuStory;
 
 	@FindBy(xpath = "//span[contains(text(),'Reels')]/parent::a")
-	WebElement menuReels;
+	private WebElement menuReels;
 
 	@FindBy(xpath = "//span[contains(text(),'IGTV')]/parent::a")
-	WebElement menuIgtv;
+	private WebElement menuIgtv;
 
 	@FindBy(xpath = "//ins")
-	WebElement ads;
+	private WebElement ads;
 
 	@FindBy(className = "cursor-pointer")
-	WebElement goToMain;
+	private WebElement goToMain;
 
 	@FindBy(xpath = "//div[@class='loader-component__circles']")
-	WebElement loader;
+	private WebElement loader;
 
-	By btnhighlightPost = By.className("highlight__button");
+    @FindBy(xpath = "//button[@class='fallback-popup__btn']")
+    private WebElement btnFallback;
 
-	By btnReadMore = By.xpath("//button[@class='output-list__caption-read-more']");
+    private By btnhighlightPost = By.className("highlight__button");
 
-	By btnsDownloadPost = By.linkText("Download");
+    private By btnReadMore = By.xpath("//button[@class='output-list__caption-read-more']");
 
-	By links = By.tagName("a");
+    private By btnsDownloadPost = By.linkText("Download");
 
-	By fc_overlay = By.className("fc-consent-root");
+    private By links = By.tagName("a");
 
-	By errorMessage = By.className("error-message");
+    private By fc_overlay = By.className("fc-consent-root");
+
+    private By errorMessage = By.className("error-message");
 
 	public void closeAds() {
 		hideAds();
@@ -115,6 +118,26 @@ public class MainPage extends AbstractComponent {
 		}
 	}
 
+    public void fiilInput(String url) {
+    	waitForElementToBeClickable(igramInput);
+        if(!igramInput.getAttribute("value").isEmpty()) {
+        	btnClear.click();
+        }
+        igramInput.sendKeys(url);
+        btnDownload.click();
+    }
+
+    public String checkErrorMessage() {
+        waitForElementToAppear(errorMessage);
+        String message = driver.findElement(errorMessage).getText();
+        return message;
+    }
+    
+    public void goToExtension(){
+    	waitForElementToBeClickable(btnFallback);
+        btnFallback.click();
+    }
+
 	public boolean isUrlInputEmpty(String urlpost) {
 		igramInput.sendKeys(urlpost);
 		if (btnClear.getText().equalsIgnoreCase("Clear")) {
@@ -122,14 +145,14 @@ public class MainPage extends AbstractComponent {
 		} else {
 			throw new RuntimeException("Expected button text to be 'Clear' but was: '" + btnClear.getText() + "'");
 		}
-		return igramInput.getAttribute("value").isEmpty();
+        return igramInput.getAttribute("value").isEmpty();
 	}
 
 	public void searchPostFile(String url) {
 		igramInput.sendKeys(url);
 		btnDownload.click();
-		waitForWebElementToAppear(searchResult);
-		waitForWebElementToAppear(outputList);
+		waitForElementToAppear(searchResult);
+		waitForElementToAppear(outputList);
 
 		scrollToElement();
 		List<WebElement> btnsReadMore = driver.findElements(btnReadMore);
@@ -191,12 +214,11 @@ public class MainPage extends AbstractComponent {
 			igramInput.sendKeys(String.valueOf(profilename.charAt(i)));
 		}
 		btnDownload.click();
-		waitForWebElementToAppear(searchResult);
-		waitForWebElementToAppear(outputProfile);
+		waitForElementToAppear(searchResult);
+		waitForElementToAppear(outputProfile);
 		waitForElementsToAppear(btnsDownloadPost);
 
-		String userNameText = userName.getText();
-		return userNameText;
+        return userName.getText();
 	}
 
 	public String goToStoryInProfile() {
@@ -204,11 +226,11 @@ public class MainPage extends AbstractComponent {
 		waitForElementToDisappear(loader);
 		String error = null;
 		List<WebElement> message = driver.findElements(errorMessage);
-		if (message.size() != 0) {
+		if (!message.isEmpty()) {
 			error = message.get(0).getText();
 			System.out.println(error);
 		} else {
-			waitForWebElementToAppear(mediaListProfile);
+			waitForElementToAppear(mediaListProfile);
 		}
 
 		return error;
@@ -217,7 +239,7 @@ public class MainPage extends AbstractComponent {
 
 	public void goTobProfileHighlights() {
 		btnProfileHighlights.click();
-		waitForWebElementToAppear(highlightsPosts);
+		waitForElementToAppear(highlightsPosts);
 	}
 
 	public void openSpecificHighlight(String highlightsName) {
@@ -226,12 +248,12 @@ public class MainPage extends AbstractComponent {
 				.findFirst().orElse(null);
 		btn.click();
 
-		waitForWebElementToAppear(mediaListProfile);
+		waitForElementToAppear(mediaListProfile);
 	}
 
 	public void goToProfileReels() {
 		btnProfileReels.click();
-		waitForWebElementToAppear(mediaListProfile);
+		waitForElementToAppear(mediaListProfile);
 
 	}
 
@@ -241,7 +263,7 @@ public class MainPage extends AbstractComponent {
 
 	public void goToMainPage() {
 		goToMain.click();
-		waitForWebElementToAppear(ads);
+		waitForElementToAppear(ads);
 		hideAds();
 	}
 
@@ -253,7 +275,7 @@ public class MainPage extends AbstractComponent {
 		}
 		driver.navigate().refresh();
 		scrollToElementShortly();
-		waitForWebElementToAppear(ads);
+		waitForElementToAppear(ads);
 		hideAds();
 	}
 
@@ -265,7 +287,7 @@ public class MainPage extends AbstractComponent {
 		}
 		driver.navigate().refresh();
 		scrollToElementShortly();
-		waitForWebElementToAppear(ads);
+		waitForElementToAppear(ads);
 		hideAds();
 	}
 
@@ -277,7 +299,7 @@ public class MainPage extends AbstractComponent {
 		}
 		driver.navigate().refresh();
 		scrollToElementShortly();
-		waitForWebElementToAppear(ads);
+		waitForElementToAppear(ads);
 		hideAds();
 	}
 
@@ -289,7 +311,7 @@ public class MainPage extends AbstractComponent {
 		}
 		driver.navigate().refresh();
 		scrollToElementShortly();
-		waitForWebElementToAppear(ads);
+		waitForElementToAppear(ads);
 		hideAds();
 	}
 

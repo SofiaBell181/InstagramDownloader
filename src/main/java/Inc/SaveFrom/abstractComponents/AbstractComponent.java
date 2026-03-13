@@ -18,13 +18,17 @@ public class AbstractComponent {
 		this.driver = driver;
 	}
 
+    public void waitForElementToAppear(By FindBy) {
+        wait = new WebDriverWait(driver, Duration.ofSeconds(7));
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(FindBy));
+    }
 
 	public void waitForElementsToAppear(By FindBy) {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(7));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(FindBy));
 	}
 	
-	public void waitForWebElementToAppear(WebElement element) {
+	public void waitForElementToAppear(WebElement element) {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(7));
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
@@ -34,10 +38,15 @@ public class AbstractComponent {
 		wait.until(ExpectedConditions.invisibilityOf(element));
 	}
 	
-	public void waitForWebElementToBeClickable(WebElement element) {
+	public void waitForElementToBeClickable(WebElement element) {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
+
+    public void waitForElementToBeClickable(By findBy) {
+        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.elementToBeClickable(findBy));
+    }
 	
 	public void hideAds() {
 		js = (JavascriptExecutor) driver;
